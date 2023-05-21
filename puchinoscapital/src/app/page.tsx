@@ -1,95 +1,131 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import React from "react";
+import Navbar from "../components/Navbar";
+import Image from "next/image";
+import "../styles/landing.css";
+
+import puchino from "../public/puchino.webp";
+import logo from "../public/logo.webp";
+import nft from "../public/nft.webp";
+import arrows from "../public/arrows.webp";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="App">
+
+      <Navbar />
+
+      <div className="landing-container">
+
+        <div className="hero">
+
+          <div className="left-side">
+            <div className="title">
+              <h1>A STEADFAST ALLY</h1>
+            </div>
+
+            <div className="intro">
+              <p>
+                Empowering your financial journey with exceptional loans and
+                lenders
+              </p>
+            </div>
+
+            <div className="description">
+              <p>
+                Growth and success go hand-in-hand. Focus on reaching your
+                financial goals with our outstanding loan and lender services.
+              </p>
+            </div>
+          </div>
+
+          <div className="right-side">
+
+            <div className="background-animation">
+              <div className="circle main-circle"></div>
+              <div className="circle small-circle small-circle1"></div>
+              <div className="circle small-circle small-circle2"></div>
+              <div className="circle small-circle small-circle3"></div>
+              <div className="circle small-circle small-circle4"></div>
+            </div>
+
+            <div className="cards">
+
+              <div className="main-card">
+                <div className="image">
+                  <Image src={puchino} alt="puchino" />
+                </div>
+
+                <div className="name">
+                  <h1>Puchino #3,701</h1>
+                </div>
+
+                <div className="stats">
+                  <div className="stat">
+                    <p className="stat-name">Duration</p>
+
+                    <span className="stat-value">7 Days</span>
+                  </div>
+
+                  <div className="stat">
+                    <p className="stat-name">Total Funding</p>
+
+                    <span className="stat-value">48 SOL</span>
+                  </div>
+
+                  <div className="stat">
+                    <p className="stat-name">Interest</p>
+
+                    <span className="stat-value">2 SOL</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="small-cards">
+
+                <div className="small-card">
+
+                  <div className="image">
+                    <Image src={logo} alt="puchino" />
+                  </div>
+
+                  <div className="info">
+
+                    <p className="name">Lender</p>
+
+                    <span className="duration">Puchinos Capital</span>
+
+                  </div>
+
+                </div>
+
+                <Image src={arrows} alt="puchino" className="arrows" />
+
+                <div className="small-card2">
+
+                  <div className="info">
+
+                    <p className="name">Borrower</p>
+
+                    <span className="duration">Bzwy....5P29</span>
+
+                  </div>
+
+                  <div className="image">
+                    <Image src={nft} alt="puchino" />
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
+
       </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    </div>
+  );
 }

@@ -1,0 +1,243 @@
+nav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 48px;
+}
+
+nav .logo {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFE01B;
+    border-radius: 8px;
+}
+
+nav .logo img {
+    width: 100%;
+    height: 100%;
+}
+
+nav .links {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+nav .links .link {
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .links .link h2 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #6E6E78;
+    position: relative;
+}
+
+nav .links .link h2:hover {
+    color: #FFFFFF;
+    cursor: default;
+}
+
+nav .links .link h2:after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #131315;
+    width: 640px;
+    height: auto;
+    padding: 24px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    gap: 8px;
+    top: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.dropdown-menu a {
+    width: 292px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    gap: 8px;
+    background-color: #222225;
+    text-decoration: none !important;
+    border-radius: 4px;
+    transition: .2s;
+}
+
+.dropdown-menu a .dropdown-icon {
+    min-width: 56px;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333021;
+    border-radius: 4px;
+}
+
+.dropdown-menu a .dropdown-info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.dropdown-menu a .dropdown-info h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.dropdown-menu a .dropdown-info p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #6E6E78;
+}
+
+.dropdown-menu a:hover {
+    background-color: #333021;
+    transition: .2s;
+}
+
+.dropdown-menu a:hover .dropdown-icon {
+    background-color: #FFE01B;
+    transition: .2s;
+}
+
+.dropdown-menu a:hover .dropdown-icon img {
+    filter: brightness(0) saturate(100%);
+    transition: .2s;
+}
+
+.dropdown-menu a:hover .dropdown-info h3 {
+    color: #FFE01B;
+    transition: .2s;
+}
+
+.dropdown-menu a:hover .dropdown-info p {
+    color: #FFFFFF;
+    transition: .2s;
+}
+
+.dropdown-menu:before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    border-width: 0 12px 12px;
+    border-style: solid;
+    border-color: transparent transparent transparent transparent;
+}
+
+.link:hover .dropdown-menu,
+.link:hover h2:after {
+    display: flex;
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+
+
+nav .connect {
+    width: auto;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 20px;
+    border-radius: 4px;
+    border: 2px #FFE01B solid;
+}
+
+nav .connect h2 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFE01B;
+}
+
+nav .connect:hover {
+    background-color: #FFE01B;
+    transition: .2s;
+    cursor: pointer;
+}
+
+nav .connect:hover h2 {
+    color: #0A0A0B;
+    transition: .2s;
+}
+
+nav .mobile-menu {
+    display: none;
+}
+
+
+
+
+/* CSS Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    nav {
+        padding: 8px 20px;
+    }
+
+    nav .logo {
+        min-width: 40px;
+        min-height: 40px;
+    }
+
+    nav .logo img {
+        width: 100%;
+        height: 100%;
+    }
+
+    nav .links {
+        display: none;
+    }
+
+    nav .mobile-menu {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav .mobile-menu img {
+        width: 100%;
+        height: 100%;
+    }
+}
