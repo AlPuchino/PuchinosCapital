@@ -256,18 +256,21 @@
 
 .landing-container .hero .right-side .cards .small-cards .small-card .image {
     min-width: 64px;
+    max-width: 64px;
     min-height: 64px;
+    max-height: 64px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 4px;
-    background-color: #ffe01b;
+    background-color: #333021;
 }
 
 .landing-container .hero .right-side .cards .small-cards .small-card .image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 4px;
 }
 
 .landing-container .hero .right-side .cards .small-cards .small-card .info {
@@ -318,13 +321,13 @@
     align-items: center;
     justify-content: center;
     border-radius: 4px;
-    background-color: #ffe01b;
 }
 
 .landing-container .hero .right-side .cards .small-cards .small-card2 .image img {
     width: 64px;
     height: 64px;
     object-fit: cover;
+    border-radius: 4px;
 }
 
 .landing-container .hero .right-side .cards .small-cards .small-card2 .info {

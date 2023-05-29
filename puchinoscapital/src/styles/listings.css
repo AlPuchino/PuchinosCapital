@@ -1,0 +1,221 @@
+.listings-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.listings-container .title {
+    width: 100%;
+    max-width: 1240px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: default;
+}
+
+.listings-container .title h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-left: 16px;
+}
+
+.listings-container .listings {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+}
+
+.listings-container .listings .listing {
+    width: 100%;
+    max-width: 295px;
+    height: 168px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #131315;
+    border-radius: 4px;
+    padding: 16px 20px;
+    gap: 16px;
+}
+
+.listings-container .listings .listing:hover {
+    outline: 1px solid #FFFFFF;
+}
+
+.listings-container .listings .listing .listing-module {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.listings-container .listings .listing .listing-module .listing-first-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    cursor: default;
+}
+
+.listings-container .listings .listing .listing-module .listing-first-row .listing-image {
+    max-width: 64px;
+    max-height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.listings-container .listings .listing .listing-module .listing-first-row .listing-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.listings-container .listings .listing .listing-module .listing-first-row .listing-info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 8px;
+}
+
+.listings-container .listings .listing .listing-module .listing-first-row .listing-info p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.listings-container .listings .listing .listing-module .listing-first-row .listing-info span {
+    font-size: 14px;
+    font-weight: 400;
+    color: #6E6E78;
+}
+
+.listings-container .listings .listing .listing-module .listing-first-row .listing-info span strong {
+    font-weight: 600;
+    color: #6E6E78;
+}
+
+.listings-container .listings .listing .listing-module .listing-second-row {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+    cursor: default;
+}
+
+.listings-container .listings .listing .listing-module .listing-second-row .listing-liquidity {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.listings-container .listings .listing .listing-module .listing-second-row .listing-liquidity p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #6E6E78;
+}
+
+.listings-container .listings .listing .listing-module .listing-second-row .listing-liquidity .listing-liquidity-amount {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+}
+
+.listings-container .listings .listing .listing-module .listing-second-row .listing-liquidity .listing-liquidity-amount img {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.listings-container .listings .listing .listing-module .listing-second-row .listing-liquidity .listing-liquidity-amount span {
+    font-size: 14px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.listings-container .listings .listing .listing-module .listing-second-row .listing-apy {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.listings-container .listings .listing .listing-module .listing-second-row .listing-apy p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #6E6E78;
+}
+
+.listings-container .listings .listing .listing-module .listing-second-row .listing-apy span {
+    font-size: 14px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.listings-container .listings .listing .button {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px #FFFFFF solid;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.listings-container .listings .listing .button:hover {
+    background-color: #FFE01B;
+    border: 1px #FFE01B solid;
+    cursor: pointer;
+    color: #131315;
+}
+
+@media only screen and (max-width: 768px) {
+    .listings-container .listings .listing {
+        width: calc(50% - 20px);
+        max-width: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .listings-container {
+        padding: 0 20px;
+    }
+
+    .listings-container .listings .listing {
+        width: 100%;
+    }
+}

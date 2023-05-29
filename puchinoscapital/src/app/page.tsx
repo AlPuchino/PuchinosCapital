@@ -4,7 +4,7 @@ import Image from "next/image";
 import "../styles/landing.css";
 
 import puchino from "../public/puchino.webp";
-import logo from "../public/logo.webp";
+import logo from "../public/puchinobank.webp";
 import nft from "../public/nft.webp";
 import arrows from "../public/arrows.webp";
 
