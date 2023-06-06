@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import Image from "next/image";
 import "../styles/landing.css";
 
@@ -11,8 +10,6 @@ import arrows from "../public/arrows.webp";
 export default function Home() {
   return (
     <div className="App">
-
-      <Navbar />
 
       <div className="landing-container">
 

@@ -1,5 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import  WalletButton  from '../contexts/WalletButton';
 import Image from "next/image";
 import "../styles/navbar.css";
 
@@ -13,9 +14,22 @@ import apply from "../public/apply.svg";
 import offer from "../public/offer.svg";
 import lightning from "../public/lightning.svg";
 import hamburger from "../public/hamburger.svg";
+import { useWallet } from "@solana/wallet-adapter-react";
 
 export default function Navbar() {
+  const wallet = useWallet();
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isWalletConnected, setIsWalletConnected] = useState(false);
+
+  useEffect(() => {
+    if (wallet.connected) {
+      console.log("wallet connected and its value is: ", wallet.publicKey?.toString());
+      setIsWalletConnected(true);
+    } else {
+      setIsWalletConnected(false);
+    }
+  }, [wallet.connected]);
+
 
   const toggleMobileMenu = () => {
       setMobileMenuOpen(!isMobileMenuOpen);
@@ -277,7 +291,7 @@ export default function Navbar() {
         </div>
       </div>
       <div className="connect">
-        <h2>Select Wallet</h2>
+        <WalletButton />
       </div>
       <div className="mobile-menu" onClick={toggleMobileMenu}>
         <Image src={hamburger} alt="Puchinos Capital" width={40} height={40} />

@@ -1,5 +1,6 @@
 import './globals.css'
 import Navbar from '@/components/Navbar'
+import { WalletAuthWrapper } from "../contexts/WalletAuth";
 
 export const metadata = {
   title: 'Create Next App',
@@ -13,10 +14,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <Navbar />
-        {children}
-      </body>
+      <WalletAuthWrapper>
+        <body>
+          <Navbar />
+          {children}
+        </body>
+      </WalletAuthWrapper>
     </html>
   )
 }

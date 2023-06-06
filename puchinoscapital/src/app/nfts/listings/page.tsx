@@ -1,13 +1,15 @@
 'use client'
 import React, { useEffect, useState } from "react";
+import { useRouter } from 'next/navigation';
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 
 import "../../../styles/listings.css";
 import solana from "../../../public/solana.webp";
 
 interface Listing {
-  id: string;
+  id: any;
+  name: string;
   image: string;
   available: number;
   liquidity: number;
@@ -15,6 +17,7 @@ interface Listing {
 }
 
 const Page = () => {
+  const router = useRouter();
   const [listings, setListings] = useState<Listing[]>([]);
 
   useEffect(() => {
@@ -44,11 +47,11 @@ const Page = () => {
 
       <div className="listings">
         {listings.map((listing) => (
-          <div className="listing" key={listing.id}>
+          <div className="listing" key={listing.name}>
             <div className="listing-module">
               <div className="listing-first-row">
                 <div className="listing-image">
-                  <Image src={listing.image} alt="listing" />
+                  <Image src={listing.image} alt="listing" width={64} height={64} />
                 </div>
 
                 <div className="listing-info">
@@ -75,9 +78,9 @@ const Page = () => {
               </div>
             </div>
 
-            <Link href={`/nfts/listings/${listing.id}`} legacyBehavior>
+            <button type="button" onClick={() => router.push(`/nfts/listings/${listing.name}`)}>
               <a className="button">View All</a>
-            </Link>
+            </button>
           </div>
         ))}
       </div>
