@@ -171,17 +171,14 @@ nav .links .link h2:after {
     transition-delay: 0s;
 }
 
-
-
 nav .connect {
     width: auto;
     height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8px 20px;
     border-radius: 4px;
-    border: 2px #FFE01B solid;
+    /* border: 2px #FFE01B solid; */
 }
 
 nav .connect h2 {
@@ -205,8 +202,120 @@ nav .mobile-menu {
     display: none;
 }
 
+.wallet-adapter-modal-wrapper {
+    width: auto;
+    max-width: 664px !important;
+    flex: 0 0 auto !important;
+    background-color: #131315 !important;
+    font-family: bahnschrift !important;
+    font-size: 48px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 0 20px !important;
+    border-radius: 4px !important;
+}
 
+.wallet-adapter-modal-wrapper .wallet-adapter-modal-list {
+    display: flex;
+    flex-direction: column;
+}
 
+.wallet-adapter-modal-wrapper .wallet-adapter-modal-button-close {
+    background-color: #0A0A0B;
+    border-radius: 4px;
+}
+
+.wallet-adapter-modal-wrapper .wallet-adapter-modal-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1C1D21;
+    border-radius: 4px;
+}
+
+.wallet-adapter-modal-wrapper .wallet-adapter-modal-list li:hover button {
+    background-color: #313135;
+    border-radius: 4px;
+}
+
+.wallet-adapter-modal-wrapper .wallet-adapter-collapse {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    padding-top: 8px;
+}
+
+.wallet-adapter-modal-wrapper .wallet-adapter-collapse li {
+    width: 100%;
+    max-width: 308px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1C1D21;
+    border-radius: 4px;
+}
+
+.wallet-dropdown {
+    width: auto;
+    right: 0;
+    position: relative;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    gap: 8px;
+}
+
+.wallet-dropdown .user-icon {
+    width: auto;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    padding: 8px;
+    gap: 8px;
+}
+
+.wallet-dropdown .user-icon h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.wallet-dropdown .dropdown-content {
+    width: auto;
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #131315;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.wallet-dropdown .dropdown-content a {
+    color: #FFFFFF;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.wallet-dropdown .dropdown-content a:hover {
+    background-color: #333021;
+    transition: .2s;
+}
+
+.wallet-dropdown .dropdown-container:hover .dropdown-content {
+    display: block;
+}
 
 /* CSS Media Query for Mobile Devices */
 @media (max-width: 768px) {
@@ -239,5 +348,41 @@ nav .mobile-menu {
     nav .mobile-menu img {
         width: 100%;
         height: 100%;
+    }
+
+    .dropdown-menu {
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 12px;
+        border-radius: 0;
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .dropdown-menu a {
+        width: 100%;
+        height: 48px;
+        justify-content: flex-start;
+        padding: 8px;
+    }
+
+    .dropdown-menu a .dropdown-icon {
+        min-width: 40px;
+        min-height: 40px;
+    }
+
+    .dropdown-menu a .dropdown-info h3 {
+        font-size: 14px;
+    }
+
+    .wallet-adapter-modal-wrapper {
+        max-width: 100% !important;
+    }
+
+    .wallet-adapter-modal-wrapper .wallet-adapter-modal-list li {
+        max-width: 100%;
     }
 }

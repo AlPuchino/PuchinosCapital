@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from 'next/navigation';
 import Image from "next/image";
+import Pusher from "pusher-js";
 // import Link from "next/link";
 
 import "../../../styles/listings.css";
@@ -14,6 +15,7 @@ interface Listing {
   available: number;
   liquidity: number;
   apy: number;
+  interest: number;
 }
 
 const Page = () => {
@@ -21,23 +23,19 @@ const Page = () => {
   const [listings, setListings] = useState<Listing[]>([]);
 
   useEffect(() => {
-    loadListings();
-  }, []);
+    const pusher = new Pusher('6737a76f2d851a4100bf', {
+      cluster: 'us3',
+  });
 
-  const loadListings = async () => {
-    try {
-      const response = await fetch("/api/listings");
-      if (response.ok) {
-        const data = await response.json();
-        console.log("Listados cargados:", data);
-        setListings(data);
-      } else {
-        throw new Error("Error al cargar los listados");
-      }
-    } catch (error) {
-      console.error("Error al cargar los listados:", error);
-    }
-  };
+  const channel = pusher.subscribe("my-channel");
+  channel.bind("listings-updated", function (data: any) {
+    console.log(data);
+    setListings(data);
+  });
+
+  fetch("/api/listings")
+
+  }, []);
 
   return (
     <div className="listings-container">
@@ -55,7 +53,7 @@ const Page = () => {
                 </div>
 
                 <div className="listing-info">
-                  <p>{listing.id}</p>
+                  <p>{listing.name}</p>
                   <span>
                     <strong>{listing.available}</strong> Available
                   </span>
@@ -67,19 +65,19 @@ const Page = () => {
                   <p>Pool</p>
                   <div className="listing-liquidity-amount">
                     <Image src={solana} alt="logo" />
-                    <span>{listing.liquidity}</span>
+                    <span>{listing.liquidity.toLocaleString("en-US", { style: "currency", currency: "USD" }).replace(/[$]/g, "")}</span>
                   </div>
                 </div>
 
                 <div className="listing-apy">
                   <p>APY</p>
-                  <span>{listing.apy}%</span>
+                  <span>{listing.interest}%</span>
                 </div>
               </div>
             </div>
 
-            <button type="button" onClick={() => router.push(`/nfts/listings/${listing.name}`)}>
-              <a className="button">View All</a>
+            <button className="button" onClick={() => router.push(`/nfts/listings/${listing.name}`)}>
+              <a>View All</a>
             </button>
           </div>
         ))}

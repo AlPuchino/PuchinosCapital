@@ -1,12 +1,12 @@
 @font-face {
-  font-family: 'Poppins', sans-serif;
-  src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');;
+  font-family: 'Bahnschrift';
+  src: url('../fonts/BAHNSCHRIFT.TTF') format('truetype');
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Bahnschrift';
 }
 
 body {

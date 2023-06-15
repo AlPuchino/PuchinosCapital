@@ -1,37 +1,37 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { MongoClient } from 'mongodb';
+import Pusher from "pusher";
 
-const uri = 'mongodb+srv://alpuchinodev:Ocvoe0dsdTS6lcRu@capital.tbqrt8j.mongodb.net/';
+const pusher = new Pusher({
+  appId: "1614166",
+  key: "6737a76f2d851a4100bf",
+  secret: "5f4f71b22b6e848927de",
+  cluster: "us3",
+  useTLS: true,
+});
+
 const dbName = 'Puchinos-Capital';
 const collectionName = 'listings';
 
-let client: MongoClient;
-
-const connectToDatabase = async () => {
-  try {
-    if (!client) {
-      client = new MongoClient(uri);
-      await client.connect();
-    }
-    console.log('Conectado a la base de datos correctamente');
-  } catch (error) {
-    console.error('Error al conectar a la base de datos:', error);
-    throw error;
-  }
-};
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    await connectToDatabase();
+
+    const { MongoClient } = require('mongodb');
+
+    const uri = 'mongodb+srv://alpuchinodev:Ocvoe0dsdTS6lcRu@capital.tbqrt8j.mongodb.net/';
+
+    const client = new MongoClient(uri, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+
+    await client.connect();
 
     const db = client.db(dbName);
     const collection = db.collection(collectionName);
 
     const listings = await collection.find().toArray();
 
-    console.log('Listados cargados correctamente');
-
-    console.log('los listados son:', listings);
+    pusher.trigger("my-channel", "listings-updated", listings);
 
     res.status(200).json(listings);
   } catch (error) {

@@ -22,7 +22,7 @@ const useWalletEffect = () => {
     const { publicKey, wallet } = useWallet();
     useEffect(() => {
         if (publicKey) {
-            console.log(`using wallet ${publicKey.toBase58()}`);
+            // console.log(`using wallet ${publicKey.toBase58()}`);
         } else {
             console.log('no wallet');
         }

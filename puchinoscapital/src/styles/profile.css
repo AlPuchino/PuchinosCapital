@@ -1,0 +1,110 @@
+.profile-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.profile-container .profile-details {
+    width: 100%;
+    max-width: 1240px;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.profile-container .profile-details .first-container {
+    width: 100%;
+    max-width: 715px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.profile-container .profile-details .first-container .R41N-chart {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    background-color: #131315;
+    padding: 12px 16px;
+    border-radius: 2px;
+}
+
+.profile-container .profile-details .first-container .R41N-chart .title {
+    width: 100%;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.profile-container .profile-details .first-container .R41N-chart .title h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.profile-container .profile-details .first-container .R41N-chart canvas {
+    width: 100%;
+    height: 300px;
+    border-radius: 2px;
+}
+
+
+
+
+
+
+
+
+
+.profile-container .profile-details .second-container {
+    width: 100%;
+    max-width: 505px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    /* border: 1px red solid; */
+}
+
+.profile-container .profile-details .second-container .weekly-module {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 12px 16px;
+    background-color: #131315;
+    border-radius: 2px;
+}
+
+.profile-container .profile-details .second-container .weekly-module .title {
+    width: 100%;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.profile-container .profile-details .second-container .weekly-module .title h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+}
