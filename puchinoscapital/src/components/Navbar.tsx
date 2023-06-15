@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 import React, { useEffect, useState } from "react";
-import WalletButton from '../contexts/WalletButton';
+import { DynamicWidget} from '@dynamic-labs/sdk-react';
 import Image from "next/image";
 import "../styles/navbar.css";
 import fetch from 'node-fetch';
@@ -322,7 +322,7 @@ export default function Navbar() {
       </div>
     </div>
   )}
-  {!isDropdownVisible && <WalletButton />}
+  {!isDropdownVisible && <DynamicWidget />}
       </div>
       <div className="mobile-menu" onClick={toggleMobileMenu}>
         <Image src={hamburger} alt="Puchinos Capital" width={40} height={40} />

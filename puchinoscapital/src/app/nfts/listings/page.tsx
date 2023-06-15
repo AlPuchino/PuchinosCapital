@@ -7,6 +7,7 @@ import Pusher from "pusher-js";
 
 import "../../../styles/listings.css";
 import solana from "../../../public/solana.webp";
+import ethereum from "../../../public/ethereum.webp";
 
 interface Listing {
   id: any;
@@ -16,6 +17,7 @@ interface Listing {
   liquidity: number;
   apy: number;
   interest: number;
+  blockchain: string;
 }
 
 const Page = () => {
@@ -64,7 +66,7 @@ const Page = () => {
                 <div className="listing-liquidity">
                   <p>Pool</p>
                   <div className="listing-liquidity-amount">
-                    <Image src={solana} alt="logo" />
+                    <Image src={listing.blockchain === "solana" ? solana : ethereum} alt="listing" style={{ backgroundColor: solana ? "#9945FF" : "#537FEF" }}/>
                     <span>{listing.liquidity.toLocaleString("en-US", { style: "currency", currency: "USD" }).replace(/[$]/g, "")}</span>
                   </div>
                 </div>

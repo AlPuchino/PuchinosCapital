@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import '../../../../styles/[id].css';
 import Image from "next/image";
 import { useWallet } from "@solana/wallet-adapter-react";
+import { toast } from "react-toastify";
 
 import sol from '../../../../public/solana.webp';
 import user from '../../../../public/user.svg';
@@ -48,7 +49,13 @@ function ListingDetails({ params }: any) {
   }, [wallet.publicKey]);
 
   if (!listingData) {
-    return <div>Loading...</div>;
+    return (
+      <div className="collection-details-container">
+        <div className="collection-details">
+          <h1>Loading...</h1>
+        </div>
+      </div>
+    )
   }
 
   const handleFilter = (filter: string) => {
@@ -105,6 +112,36 @@ function ListingDetails({ params }: any) {
     }
   };
 
+  const createListing = async () => {
+    toast.promise(
+      async () => {
+        try {
+          console.log("Creating listing...");
+          const response = await fetch('/api/createListing', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ listingData }),
+          });
+          if (!response.ok) {
+            throw new Error('Error creating listing');
+          } else {
+            console.log('Listing created');
+          }
+          const data = await response.json();
+          console.log("Listing created:", data);
+        } catch (error) {
+          console.error("Error creating listing:", error);
+        }
+      },
+      {
+        pending: 'Creating listing...',
+        success: 'Listing created!',
+        error: 'Error creating listing',
+      }
+    );
+  };
 
   return (
     <div className="collection-details-container">
@@ -210,6 +247,8 @@ function ListingDetails({ params }: any) {
         </div>
 
         <div className="table-separator"></div>
+
+          <button className="create-listing-button" onClick={createListing}>Create Listing</button>
 
         {filteredLenders.map((lender: any) => (
           <div className={`collection-lender ${lender.available ? 'available' : 'unavailable'}`} key={lender.from}>
