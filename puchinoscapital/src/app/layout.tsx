@@ -1,7 +1,6 @@
-'use client';
 import './globals.css'
 import { DynamicContextProvider, SortWallets } from '@dynamic-labs/sdk-react'
-import { ToastContainer } from 'react-toastify'
+// import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 export default function RootLayout({
@@ -13,7 +12,7 @@ export default function RootLayout({
   return (
     <html lang="en">
         <body>
-      <DynamicContextProvider
+      {/* <DynamicContextProvider
         settings={{
           environmentId: 'd7349082-d115-4c9a-bad8-08fd7f80d9cf',
           appLogoUrl: 'https://raw.githubusercontent.com/AlPuchino/PuchinosCapitalData/main/PuchinosLogo.png',
@@ -26,8 +25,8 @@ export default function RootLayout({
                 solana: "phantom"
             }
           }
-        }}>
-          <ToastContainer 
+        }}> */}
+          {/* <ToastContainer 
             position="bottom-left"
             autoClose={5000}
             hideProgressBar={false}
@@ -36,9 +35,9 @@ export default function RootLayout({
             rtl={false}
             draggable
             theme='dark'
-          />
+          /> */}
           {children}
-      </DynamicContextProvider>
+      {/* </DynamicContextProvider> */}
         </body>
     </html>
   )

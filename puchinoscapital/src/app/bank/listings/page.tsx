@@ -18,21 +18,21 @@ interface Listing {
     blockchain: string;
 }
 
-function loadListings() {
-    fetch("/api/listings")
-    .then((res) => res.json())
-    .then((data) => {
-        console.log(data);
-        return data;
-    }
-    );
-}
+// function loadListings() {
+//     fetch("/api/listings")
+//     .then((res) => res.json())
+//     .then((data) => {
+//         console.log(data);
+//         return data;
+//     }
+//     );
+// }
 
 export default async function Listings() {
     const router = useRouter();
-    const listings = await loadListings();
+    // const listings = await loadListings();
 
-    console.log(listings);
+    // console.log(listings);
 
     return (
         <div className="listings-container">

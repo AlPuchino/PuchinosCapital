@@ -1,12 +1,41 @@
-.side-menu {
-    width: 64px;
+.sidebar-menu {
+    max-width: 260px;
     height: 100vh;
     background-color: #18181B;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: sticky;
+    align-items: center;
+    justify-content: space-between;
     top: 0;
+    padding: 8px 6px;
 }
 
+.sidebar-menu .ant-menu.ant-menu-root.ant-menu-vertical.ant-menu-dark.menu.ant-menu-inline-collapsed.css-dev-only-do-not-override-1wazalj {
+    width: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #18181B;
+    gap: 4px;
+}
+
+.sidebar-menu .ant-menu.ant-menu-root.ant-menu-vertical.ant-menu-dark.menu.ant-menu-inline-collapsed.css-dev-only-do-not-override-1wazalj .ant-menu-item {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    padding: 16px;
+}
+
+.sidebar-menu .ant-menu.ant-menu-root.ant-menu-vertical.ant-menu-dark.menu.ant-menu-inline-collapsed.css-dev-only-do-not-override-1wazalj .ant-menu-item svg {
+    min-width: 20px;
+    height: 20px;
+}
+
+.sidebar-menu .ant-menu.ant-menu-root.ant-menu-vertical.ant-menu-dark.menu.ant-menu-inline-collapsed.css-dev-only-do-not-override-1wazalj .ant-menu-item.ant-menu-item-selected {
+    background-color: #FFE01B;
+}
+
+.sidebar-menu .ant-menu.ant-menu-root.ant-menu-vertical.ant-menu-dark.menu.ant-menu-inline-collapsed.css-dev-only-do-not-override-1wazalj .ant-menu-item.ant-menu-item-selected svg {
+    filter: invert(100%);
+}
