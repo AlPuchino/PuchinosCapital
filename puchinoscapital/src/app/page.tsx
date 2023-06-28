@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Navbar from '@/components/Navbar'
 import "../styles/landing.css";
 
 import puchino from "../public/puchino.webp";
@@ -8,10 +9,13 @@ import nft from "../public/nft.webp";
 import arrows from "../public/arrows.webp";
 
 export default function Home() {
+
   return (
     <div className="App">
 
       <div className="landing-container">
+
+        <Navbar />
 
         <div className="hero">
 
@@ -125,4 +129,5 @@ export default function Home() {
 
     </div>
   );
+
 }

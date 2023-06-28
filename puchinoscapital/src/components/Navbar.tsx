@@ -1,10 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 import React, { useEffect, useState } from "react";
-import { DynamicWidget} from '@dynamic-labs/sdk-react';
+import { DynamicWidget } from '@dynamic-labs/sdk-react';
 import Image from "next/image";
 import "../styles/navbar.css";
-import fetch from 'node-fetch';
 
 import logo from "../public/logo.svg";
 import bank from "../public/bank.svg";
@@ -16,39 +15,14 @@ import apply from "../public/apply.svg";
 import offer from "../public/offer.svg";
 import lightning from "../public/lightning.svg";
 import hamburger from "../public/hamburger.svg";
-import { useWallet } from "@solana/wallet-adapter-react";
+
+import { useDynamicContext } from '@dynamic-labs/sdk-react'; 
+
+import MySendButton from "@/functions/sendTransaction";
 
 export default function Navbar() {
-  const wallet = useWallet();
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isWalletConnected, setIsWalletConnected] = useState(false);
-  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
-
-  useEffect(() => {
-    if (wallet.connected) {
-      console.log("wallet connected and its value is: ", wallet.publicKey?.toString());
-      // fetch('http://localhost:3000/api/nfts', {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      //   body: JSON.stringify({ publicKey: wallet.publicKey?.toString() }),
-      // })
-      //   .then(response => response.json())
-      //   .then(data => {
-      //     console.log('Success:', data.assets[0].collectionAddress);
-      //   })
-      //   .catch((error) => {
-      //     console.error('Error:', error);
-      //   });
-      setIsWalletConnected(true);
-      setIsDropdownVisible(true);
-    } else {
-      setIsWalletConnected(false);
-      setIsDropdownVisible(false);
-    }
-  }, [wallet.connected, wallet.publicKey]);
-
+  const [isConnected, setIsConnected] = useState(false);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
@@ -309,21 +283,21 @@ export default function Navbar() {
           )}
         </div>
       </div>
-      <div className={`wallet-dropdown ${isWalletConnected ? "connected" : ""}`}>
-  {isDropdownVisible && (
-    <div className="dropdown-container">
-      <div className="user-icon" >
-          <h3>{wallet.publicKey?.toString() ? wallet.publicKey?.toString().substring(0, 4) + "..." + wallet.publicKey?.toString().substring(wallet.publicKey?.toString().length - 4) : "Connect Wallet"}</h3>
-      </div>
-      <div className="dropdown-content">
-        <a href={`/profile/${wallet.publicKey?.toString()}`}>Profile</a>
-        <a href="/settings">Settings</a>
-        <button onClick={() => wallet.disconnect()}>Disconnect Wallet</button>
-      </div>
-    </div>
-  )}
-  {!isDropdownVisible && <DynamicWidget />}
-      </div>
+      <DynamicWidget variant="dropdown" />
+
+
+
+
+
+
+            <MySendButton />
+
+
+
+
+
+
+
       <div className="mobile-menu" onClick={toggleMobileMenu}>
         <Image src={hamburger} alt="Puchinos Capital" width={40} height={40} />
       </div>
