@@ -1,38 +1,13 @@
-'use client'
-import React, { useEffect, useState } from "react";
-import { useRouter } from 'next/navigation';
+import React from "react";
 import Image from "next/image";
 
 import "../../../styles/listings.css";
 import solana from "../../../public/solana.webp";
 import ethereum from "../../../public/ethereum.webp";
 
-interface Listing {
-    id: any;
-    name: string;
-    image: string;
-    available: number;
-    liquidity: number;
-    apy: number;
-    interest: number;
-    blockchain: string;
-}
+import ListingsFetch from "./Listings";
 
-// function loadListings() {
-//     fetch("/api/listings")
-//     .then((res) => res.json())
-//     .then((data) => {
-//         console.log(data);
-//         return data;
-//     }
-//     );
-// }
-
-export default async function Listings() {
-    const router = useRouter();
-    // const listings = await loadListings();
-
-    // console.log(listings);
+export default function Listings() {
 
     return (
         <div className="listings-container">
@@ -48,6 +23,8 @@ export default async function Listings() {
 
             <div className="filters">
             </div>
+
+            <ListingsFetch />
 
             {/* <div className="listings">
                 {listings?.map((listing) => (

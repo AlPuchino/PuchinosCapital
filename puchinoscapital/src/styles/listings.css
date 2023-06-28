@@ -38,7 +38,7 @@
     width: 100%;
     display: grid;
     grid-column: 1 / 13;
-    grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
     align-items: center;
     justify-content: center;
@@ -85,7 +85,7 @@
 }
 
 .listings-container .listings .listing .listing-module .listing-first-row .listing-image {
-    width: 64px;
+    min-width: 64px;
     height: 64px;
     display: flex;
     align-items: center;
