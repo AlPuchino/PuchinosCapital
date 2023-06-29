@@ -16,12 +16,9 @@ export default function Listings() {
                 <h1>Listings</h1>
 
                 <div className="description">
-                    <p>Earn passive income by lending your cryptocurrencies.</p>
+                    <p>Discover the best NFTs to invest in.</p>
                 </div>
 
-            </div>
-
-            <div className="filters">
             </div>
 
             <ListingsFetch />
