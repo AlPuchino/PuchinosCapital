@@ -113,7 +113,7 @@
     outline: 3px #18181B solid;
     border-radius: 2px;
     position: relative;
-    background-color: #0A0A0B;
+    background-color: transparent;
 }
 
 .listings-container .listings .listing .listing-module .listing-first-row .listing-image .chain-icon {
