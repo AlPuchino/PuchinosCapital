@@ -141,9 +141,6 @@
 
 .listings-container .listings .listing .listing-module .listing-first-row .listing-image img {
     border-radius: 2px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 .listings-container .listings .listing .listing-module .listing-first-row .listing-info {
