@@ -1,13 +1,14 @@
 import './globals.css'
-import { DynamicContextProvider, SortWallets } from '@dynamic-labs/sdk-react'
-// import { ToastContainer } from 'react-toastify'
+// import { DynamicContextProvider, SortWallets } from '@dynamic-labs/sdk-react'
+import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 export default function RootLayout({
-
+  // modal,
   children,
 } : {
   children: React.ReactNode
+  // modal: React.ReactNode
 }) {
   return (
     <html lang="en">
@@ -26,8 +27,8 @@ export default function RootLayout({
             }
           }
         }}> */}
-          {/* <ToastContainer 
-            position="bottom-left"
+          <ToastContainer 
+            position="top-right"
             autoClose={5000}
             hideProgressBar={false}
             newestOnTop={false}
@@ -35,7 +36,8 @@ export default function RootLayout({
             rtl={false}
             draggable
             theme='dark'
-          /> */}
+          />
+          {/* {modal} */}
           {children}
       {/* </DynamicContextProvider> */}
         </body>

@@ -34,7 +34,7 @@
     font-size: 32px;
     line-height: 36px;
     font-weight: 600;
-    color: #FFFFFF;
+    color: #E8E8E8;
     margin: 0;
 }
 
@@ -42,7 +42,7 @@
     font-size: 16px;
     line-height: 20px;
     font-weight: 400;
-    color: #6E6E78;
+    color: #747476;
 }
 
 .listings-container .listings {
@@ -156,7 +156,7 @@
     font-size: 16px;
     line-height: 16px;
     font-weight: 600;
-    color: #FFFFFF;
+    color: #E8E8E8;
 }
 
 .listings-container .listings .listing:hover .listing-module .listing-first-row .listing-info p {
@@ -166,7 +166,7 @@
 .listings-container .listings .listing .listing-module .listing-first-row .listing-info span {
     font-size: 14px;
     font-weight: 400;
-    color: #6E6E78;
+    color: #747476;
 }
 
 .listings-container .listings .listing:hover .listing-module .listing-first-row .listing-info span {
@@ -175,7 +175,7 @@
 
 .listings-container .listings .listing .listing-module .listing-first-row .listing-info span strong {
     font-weight: 600;
-    color: #6E6E78;
+    color: #747476;
 }
 
 .listings-container .listings .listing:hover .listing-module .listing-first-row .listing-info span strong {
@@ -203,7 +203,7 @@
 .listings-container .listings .listing .listing-module .listing-second-row .listing-liquidity p {
     font-size: 14px;
     font-weight: 400;
-    color: #6E6E78;
+    color: #747476;
 }
 
 .listings-container .listings .listing:hover .listing-module .listing-second-row .listing-liquidity p {
@@ -230,7 +230,7 @@
 .listings-container .listings .listing .listing-module .listing-second-row .listing-liquidity .listing-liquidity-amount span {
     font-size: 14px;
     font-weight: 600;
-    color: #6E6E78;
+    color: #747476;
 }
 
 .listings-container .listings .listing:hover .listing-module .listing-second-row .listing-liquidity .listing-liquidity-amount span {
@@ -249,7 +249,7 @@
 .listings-container .listings .listing .listing-module .listing-second-row .listing-apy p {
     font-size: 14px;
     font-weight: 400;
-    color: #6E6E78;
+    color: #747476;
 }
 
 .listings-container .listings .listing:hover .listing-module .listing-second-row .listing-apy p {
@@ -259,7 +259,7 @@
 .listing .listing-apy span {
     font-size: 14px;
     font-weight: 600;
-    color: #6E6E78;
+    color: #747476;
 }
 
 .listing:hover .listing-apy span {
@@ -270,6 +270,427 @@
     font-weight: 600;
     color: #18181B;
 }
+
+
+
+
+
+
+
+
+.bank-container .listing-modal-container {
+    position: fixed;
+    width: 200%;
+    height: 100%;
+    top: 0;
+    left: calc(0 + 64px);
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bank-container .listing-modal-container .modal-overlay {
+    width: 100%;
+    max-width: 532px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #18181B;
+    border-radius: 8px;
+    padding: 24px 16px;
+    gap: 16px;
+    transition: .2s;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-title {
+    width: 100%;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-title h1 {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #E8E8E8;
+    cursor: default;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-title img {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-title img:hover {
+    filter: brightness(0) saturate(100%) invert(78%) sepia(90%) saturate(919%) hue-rotate(340deg) brightness(107%) contrast(101%);
+}
+
+
+
+.bank-container .listing-modal-container .modal-overlay .modal-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-up {
+    width: 100%;
+    height: auto;
+    background-color: #131316;
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    cursor: default;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-up .collection-image {
+    width: 68px;
+    height: 68px;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-up .collection-image img {
+    border-radius: 4px;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-up .collection-info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: center;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-up .collection-info .collection-name {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 4px;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-up .collection-info .collection-name h1 {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 600;
+    color: #E8E8E8;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-up .collection-info .collection-name span {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #747476;
+}
+
+
+
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-up .collection-info .collection-liquidity {
+    width: 100%;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-up .collection-info .collection-liquidity h2 {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+    color: #747476;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-up .collection-info .collection-liquidity .collection-liquidity-info {
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-up .collection-info .collection-liquidity .collection-liquidity-info span {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #E8E8E8;
+}
+
+
+
+
+
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-down {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-down .table {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    cursor: default;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-down .table  .table-pool {
+    width: 100%;
+    max-width: 48px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-down .table  .table-amount {
+    width: 100%;
+    max-width: 82px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-down .table  .table-interest {
+    width: 100%;
+    max-width: 82px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-down .table  .table-duration {
+    width: 100%;
+    max-width: 37px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-down .table  .table-accept {
+    width: 100%;
+    max-width: 80px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-down .table span {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+    color: #747476;
+}
+
+
+
+
+
+
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-down .lenders {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-down .lenders .lender {
+    width: 100%;
+    height: 100%;
+    max-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    background-color: #131316;
+    border-radius: 8px;
+    transition: .2s;
+    padding: 12px 16px;
+    cursor: default;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-down .lenders .lender .lender-pool {
+    width: 100%;
+    max-width: 48px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-down .lenders .lender .lender-amount {
+    width: 100%;
+    max-width: 82px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-down .lenders .lender .lender-amount .value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-down .lenders .lender .lender-amount .value span {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+    color: #E8E8E8;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-down .lenders .lender .lender-interest {
+    width: 100%;
+    max-width: 82px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-down .lenders .lender .lender-interest .value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-down .lenders .lender .lender-interest .value span {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+    color: #E8E8E8;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-down .lenders .lender .lender-duration {
+    width: 100%;
+    max-width: 37px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-down .lenders .lender .lender-duration span {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+    color: #E8E8E8;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-down .lenders .lender .lender-accept {
+    width: 100%;
+    max-width: 80px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-down .lenders .lender .lender-accept button {
+    width: 100%;
+    height: auto;
+    max-width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 1px #747476 solid;
+    color: #747476;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .2s;
+    padding: 6px 0;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-down .lenders .lender .lender-accept button:hover {
+    background-color: #E8E8E8;
+    color: #131316;
+    transition: .2s;
+}
+
+
+
+
+
+
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-down .see-more {
+    width: auto;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-down .see-more span {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+    color: #747476;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-down .see-more:hover span {
+    color: #E8E8E8;
+}
+
+.bank-container .listing-modal-container .modal-overlay .modal-content .modal-content-down .see-more:hover img {
+    filter: brightness(0) saturate(100%) invert(78%) sepia(90%) saturate(919%) hue-rotate(340deg) brightness(107%) contrast(101%);
+}
+
+.ant-tooltip-inner {
+    color: #131316 !important;
+}
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (max-width: 768px) {
     .listings-container .listings .listing {

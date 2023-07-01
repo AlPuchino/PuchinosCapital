@@ -1,13 +1,13 @@
 'use client'
 import React, { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
 import Image from "next/image";
 import socket from "socket.io-client";
-import Filters, { FiltersProps } from "./Filters";
+import Filters from "./Filters";
 import { AutoComplete } from 'antd';
 
 import solana from "../../../public/solana.webp";
 import ethereum from "../../../public/ethereum.webp";
+import Link from "next/link";
 
 interface Listing {
   id: any;
@@ -21,21 +21,20 @@ interface Listing {
 }
 
 export default function ListingsFetch() {
-  const router = useRouter();
   const [listings, setListings] = useState<Listing[]>([]);
   const [selectedChain, setSelectedChain] = useState("everything");
   const [options, setOptions] = useState<any[]>([]);
-  const [listingsDup, setListingsDup] = useState<Listing[]>([]); // duplicate of listings [
-  const [search, setSearch] = useState("");
+  const [listingsDup, setListingsDup] = useState<Listing[]>([]);
 
   useEffect(() => {
     const io = socket("http://localhost:4000/listings");
 
-    io.on("listings", (data: Listing[]) => {
+    io.on("listings", (data: any[]) => {
       console.log(data);
-      setOptions(data.map((listing) => ({ value: listing.name, label: listing.name })));
-      setListings(data);
-      setListingsDup(data);
+      const listings = data[0];
+      setOptions(listings.map((listing) => ({ value: listing.name, label: listing.name })));
+      setListings(listings);
+      setListingsDup(listings);
     });
 
     return () => {
@@ -60,7 +59,6 @@ export default function ListingsFetch() {
       console.log(`search value: ${value}`);
     }
   };
-  
 
   return (
     <div className="listings">
@@ -79,8 +77,9 @@ export default function ListingsFetch() {
       {listings.map((listing) => {
         if (selectedChain === "everything" || listing.blockchain === selectedChain) {
           return (
-            <div className="listing" key={listing.id} onClick={() => router.push(`/bank/collection/${listing.id}`)}>
-              <div className="listing-module">
+            <div className="listing" key={listing.id}>
+              <Link href={`/bank/collection/${listing.id}`} legacyBehavior>
+              <a className="listing-module" style={{ textDecoration: 'none'}} key={listing.id}>
                 <div className="listing-first-row">
                   <div className="listing-image">
                     <Image src={listing.image} alt="listing" width={64} height={64} />
@@ -103,25 +102,21 @@ export default function ListingsFetch() {
 
                 <div className="listing-second-row">
                   <div className="listing-liquidity">
-                    <p>Pool</p>
+                    <p>Liquidity</p>
                     <div className="listing-liquidity-amount">
                       <span>
-                        {listing.liquidity
-                          .toLocaleString("en-US", {
-                            style: "currency",
-                            currency: "USD",
-                          })
-                          .replace(/[$]/g, "")}
+                        {listing.liquidity}
                       </span>
                     </div>
                   </div>
 
                   <div className="listing-apy">
-                    <p>APY</p>
+                    <p>Interest</p>
                     <span>{listing.interest}%</span>
                   </div>
                 </div>
-              </div>
+              </a>
+              </Link>
             </div>
           );
         } else {
