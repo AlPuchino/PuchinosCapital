@@ -1,0 +1,524 @@
+.bank-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.listings-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.listings-container .title {
+    width: 100%;
+    max-width: 1084px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4px;
+    padding: 24px 0;
+    cursor: default;
+}
+
+.listings-container .title h1 {
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 600;
+    color: #E8E8E8;
+    margin: 0;
+}
+
+.listings-container .title p {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #747476;
+}
+
+.listings-container .listings {
+    width: 100%;
+    max-width: 1084px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.listings-container .listings .filters {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.listings-container .listings .listing {
+    width: 100%;
+    max-width: 256px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #18181B;
+    border-radius: 4px;
+    padding: 12px 16px;
+    gap: 16px;
+    transition: .2s;
+}
+
+.listings-container .listings .listing:hover {
+    background-color: #FFE01B;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.listings-container .listings .listing .listing-module {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.listings-container .listings .listing .listing-module .listing-first-row {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.listings-container .listings .listing .listing-module .listing-first-row .listing-image {
+    min-width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    outline: 3px #18181B solid;
+    border-radius: 2px;
+    position: relative;
+    background-color: transparent;
+}
+
+.listings-container .listings .listing .listing-module .listing-first-row .listing-image .chain-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-top: 2px;
+    padding-left: 2px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px 0 0 0;
+    background-color: #18181B;
+}
+
+.listings-container .listings .listing .listing-module .listing-first-row .listing-image .chain-icon img {
+    min-width: 16px;
+    min-height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.listings-container .listings .listing .listing-module .listing-first-row .listing-image img {
+    border-radius: 2px;
+}
+
+.listings-container .listings .listing .listing-module .listing-first-row .listing-info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 8px;
+}
+
+.listings-container .listings .listing .listing-module .listing-first-row .listing-info p {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 600;
+    color: #E8E8E8;
+}
+
+.listings-container .listings .listing:hover .listing-module .listing-first-row .listing-info p {
+    color: #18181B;
+}
+
+.listings-container .listings .listing .listing-module .listing-first-row .listing-info span {
+    font-size: 14px;
+    font-weight: 400;
+    color: #747476;
+}
+
+.listings-container .listings .listing:hover .listing-module .listing-first-row .listing-info span {
+    color: #18181B;
+}
+
+.listings-container .listings .listing .listing-module .listing-first-row .listing-info span strong {
+    font-weight: 600;
+    color: #747476;
+}
+
+.listings-container .listings .listing:hover .listing-module .listing-first-row .listing-info span strong {
+    color: #18181B;
+}
+
+.listings-container .listings .listing .listing-module .listing-second-row {
+    width: 100%;
+    height: 16px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.listings-container .listings .listing .listing-module .listing-second-row .listing-liquidity {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.listings-container .listings .listing .listing-module .listing-second-row .listing-liquidity p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #747476;
+}
+
+.listings-container .listings .listing:hover .listing-module .listing-second-row .listing-liquidity p {
+    color: #18181B;
+}
+
+.listings-container .listings .listing .listing-module .listing-second-row .listing-liquidity .listing-liquidity-amount {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+}
+
+.listings-container .listings .listing .listing-module .listing-second-row .listing-liquidity .listing-liquidity-amount img {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.listings-container .listings .listing .listing-module .listing-second-row .listing-liquidity .listing-liquidity-amount span {
+    font-size: 14px;
+    font-weight: 600;
+    color: #747476;
+}
+
+.listings-container .listings .listing:hover .listing-module .listing-second-row .listing-liquidity .listing-liquidity-amount span {
+    color: #18181B;
+}
+
+.listings-container .listings .listing .listing-module .listing-second-row .listing-apy {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.listings-container .listings .listing .listing-module .listing-second-row .listing-apy p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #747476;
+}
+
+.listings-container .listings .listing:hover .listing-module .listing-second-row .listing-apy p {
+    color: #18181B;
+}
+
+.listing .listing-apy span {
+    font-size: 14px;
+    font-weight: 600;
+    color: #747476;
+}
+
+.listing:hover .listing-apy span {
+    color: #18181B;
+}
+
+.listing:hover .listing-apy span strong {
+    font-weight: 600;
+    color: #18181B;
+}
+
+
+
+
+
+
+
+
+.bank-container .vault-modal-container {
+    position: fixed;
+    width: 200%;
+    height: 100%;
+    top: 0;
+    left: calc(0 + 64px);
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bank-container .vault-modal-container .modal-overlay {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #18181B;
+    border-radius: 8px;
+    padding: 24px 16px;
+    gap: 16px;
+    transition: .2s;
+}
+
+.bank-container .vault-modal-container .modal-overlay .modal-title {
+    width: 100%;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bank-container .vault-modal-container .modal-overlay .modal-title h1 {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #E8E8E8;
+    cursor: default;
+}
+
+.bank-container .vault-modal-container .modal-overlay .modal-title img {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.bank-container .vault-modal-container .modal-overlay .modal-title img:hover {
+    filter: brightness(0) saturate(100%) invert(78%) sepia(90%) saturate(919%) hue-rotate(340deg) brightness(107%) contrast(101%);
+}
+
+
+
+
+.bank-container .vault-modal-container .modal-overlay .modal-content-up {
+    width: 100%;
+    height: auto;
+    background-color: #131316;
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    cursor: default;
+}
+
+.bank-container .vault-modal-container .modal-overlay .modal-content-up .collection-image {
+    width: 68px;
+    height: 68px;
+}
+
+.bank-container .vault-modal-container .modal-overlay .modal-content-up .collection-image img {
+    border-radius: 4px;
+}
+
+.bank-container .vault-modal-container .modal-overlay .modal-content-up .collection-info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: center;
+}
+
+.bank-container .vault-modal-container .modal-overlay .modal-content-up .collection-info .collection-name {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 4px;
+}
+
+.bank-container .vault-modal-container .modal-overlay .modal-content-up .collection-info .collection-name h1 {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 600;
+    color: #E8E8E8;
+}
+
+.bank-container .vault-modal-container .modal-overlay .modal-content-up .collection-info .collection-name span {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #747476;
+}
+
+.bank-container .vault-modal-container .modal-overlay .modal-content-up .collection-info .collection-liquidity {
+    width: 100%;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.bank-container .vault-modal-container .modal-overlay .modal-content-up .collection-info .collection-liquidity h2 {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+    color: #747476;
+}
+
+.bank-container .vault-modal-container .modal-overlay .modal-content-up .collection-info .collection-liquidity .collection-liquidity-info {
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+}
+
+.bank-container .vault-modal-container .modal-overlay .modal-content-up .collection-info .collection-liquidity .collection-liquidity-info span {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #E8E8E8;
+}
+
+
+
+
+
+
+
+.bank-container .vault-modal-container .modal-overlay .modal-modules {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 24px;
+}
+
+.bank-container .vault-modal-container .modal-overlay .modal-modules .left-module {
+    width: 100%;
+    max-width: 460px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.bank-container .vault-modal-container .modal-overlay .modal-modules .nft-card {
+    width: 100%;
+    height: auto;
+    max-width: 148px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #131316;
+    border-radius: 8px;
+    padding: 8px;
+    gap: 4px;
+    transition: .2s;
+}
+
+.bank-container .vault-modal-container .modal-overlay .modal-modules .nft-card h1 {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+    color: #E8E8E8;
+    cursor: default;
+}
+
+.bank-container .vault-modal-container .modal-overlay .modal-modules .nft-card span {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+    color: #747476;
+    cursor: default;
+}
+
+
+
+
+.bank-container .vault-modal-container .modal-overlay .modal-modules .nft-card-listing {
+    width: 100%;
+    height: auto;
+    max-height: 64px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    background-color: #0A0A0B;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .vaults-container .listings .listing {
+        width: calc(50% - 20px);
+        max-width: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .listings-container {
+        padding: 0 20px;
+    }
+
+    .listings-container .listings .listing {
+        width: 100%;
+    }
+}
