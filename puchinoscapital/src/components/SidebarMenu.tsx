@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
+import { DynamicWidget } from '@dynamic-labs/sdk-react';
 import { useRouter } from 'next/navigation';
 import {
   MenuFoldOutlined,
@@ -60,9 +61,11 @@ const App: React.FC = () => {
 
   return (
     <div className='sidebar-menu'>
+
       <Button type="primary" onClick={toggleCollapsed} style={{ marginBottom: 16 }}>
         {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined)}
       </Button>
+
       <Menu
         defaultSelectedKeys={['1']}
         mode="inline"
@@ -82,6 +85,11 @@ const App: React.FC = () => {
         className='menu'
         onClick={({ key }) => handleMenuClick(key)}
       />
+
+      <div className='wallet' style={{ display: collapsed ? 'none' : 'flex' }}>
+      <DynamicWidget />
+      </div>
+
     </div>
   );
 };
