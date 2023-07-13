@@ -7,7 +7,6 @@
     align-items: center;
     justify-content: space-between;
     top: 0;
-    padding: 8px 6px;
 }
 
 .sidebar-menu .ant-menu.ant-menu-root.ant-menu-vertical.ant-menu-dark.menu.ant-menu-inline-collapsed.css-dev-only-do-not-override-12upa3x {
@@ -102,4 +101,14 @@
 
 .ant-menu.ant-menu-root.ant-menu-inline.ant-menu-dark.menu.css-dev-only-do-not-override-12upa3x .ant-menu-item.ant-menu-item-selected:hover span {
     color: #000000;
+}
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .sidebar-menu {
+        display: none;
+    }
 }

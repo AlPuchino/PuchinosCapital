@@ -7,30 +7,28 @@
     justify-content: center;
 }
 
-.listings-container {
+.LI-container {
     width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column: 1 / 13;
     gap: 20px;
+    padding: 0 100px;
 }
 
-.listings-container .title {
+.LI-container .content-container {
     width: 100%;
-    max-width: 1084px;
     height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 4px;
-    padding: 24px 0;
-    cursor: default;
+    grid-column: 1 / 13;
 }
 
-.listings-container .title h1 {
+.LI-container .title {
+    grid-column: 1 / 13;
+    width: 100%;
+    padding: 48px 0 0 0;
+}
+
+.LI-container .title h1 {
     font-size: 32px;
     line-height: 36px;
     font-weight: 600;
@@ -38,35 +36,34 @@
     margin: 0;
 }
 
-.listings-container .title p {
+.LI-container .title p {
     font-size: 16px;
     line-height: 20px;
     font-weight: 400;
     color: #747476;
 }
 
-.listings-container .listings {
+.LI-container .listings {
+    grid-column: 1 / 13;
     width: 100%;
-    max-width: 1084px;
     height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
     gap: 20px;
+    padding: 20px 0;
 }
 
-.listings-container .listings .filters {
+.LI-container .listings .filters {
+    grid-column: 1 / 13;
     width: 100%;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.listings-container .listings .listing {
-    width: 100%;
-    max-width: 256px;
-    height: auto;
+.LI-container .listings .listing {
+    grid-column: span 3;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,13 +75,13 @@
     transition: .2s;
 }
 
-.listings-container .listings .listing:hover {
+.LI-container .listings .listing:hover {
     background-color: #FFE01B;
     cursor: pointer;
     transition: .2s;
 }
 
-.listings-container .listings .listing .listing-module {
+.LI-container .listings .listing .listing-module {
     width: 100%;
     height: 100%;
     display: flex;
@@ -94,7 +91,7 @@
     gap: 16px;
 }
 
-.listings-container .listings .listing .listing-module .listing-first-row {
+.LI-container .listings .listing .listing-module .listing-first-row {
     width: 100%;
     height: auto;
     display: flex;
@@ -103,7 +100,7 @@
     gap: 16px;
 }
 
-.listings-container .listings .listing .listing-module .listing-first-row .listing-image {
+.LI-container .listings .listing .listing-module .listing-first-row .listing-image {
     min-width: 64px;
     height: 64px;
     display: flex;
@@ -115,7 +112,7 @@
     background-color: transparent;
 }
 
-.listings-container .listings .listing .listing-module .listing-first-row .listing-image .chain-icon {
+.LI-container .listings .listing .listing-module .listing-first-row .listing-image .chain-icon {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -130,7 +127,7 @@
     background-color: #18181B;
 }
 
-.listings-container .listings .listing .listing-module .listing-first-row .listing-image .chain-icon img {
+.LI-container .listings .listing .listing-module .listing-first-row .listing-image .chain-icon img {
     min-width: 16px;
     min-height: 16px;
     display: flex;
@@ -138,11 +135,11 @@
     justify-content: center;
 }
 
-.listings-container .listings .listing .listing-module .listing-first-row .listing-image img {
+.LI-container .listings .listing .listing-module .listing-first-row .listing-image img {
     border-radius: 2px;
 }
 
-.listings-container .listings .listing .listing-module .listing-first-row .listing-info {
+.LI-container .listings .listing .listing-module .listing-first-row .listing-info {
     width: 100%;
     height: 100%;
     display: flex;
@@ -152,37 +149,37 @@
     gap: 8px;
 }
 
-.listings-container .listings .listing .listing-module .listing-first-row .listing-info p {
+.LI-container .listings .listing .listing-module .listing-first-row .listing-info p {
     font-size: 16px;
     line-height: 16px;
     font-weight: 600;
     color: #E8E8E8;
 }
 
-.listings-container .listings .listing:hover .listing-module .listing-first-row .listing-info p {
+.LI-container .listings .listing:hover .listing-module .listing-first-row .listing-info p {
     color: #18181B;
 }
 
-.listings-container .listings .listing .listing-module .listing-first-row .listing-info span {
+.LI-container .listings .listing .listing-module .listing-first-row .listing-info span {
     font-size: 14px;
     font-weight: 400;
     color: #747476;
 }
 
-.listings-container .listings .listing:hover .listing-module .listing-first-row .listing-info span {
+.LI-container .listings .listing:hover .listing-module .listing-first-row .listing-info span {
     color: #18181B;
 }
 
-.listings-container .listings .listing .listing-module .listing-first-row .listing-info span strong {
+.LI-container .listings .listing .listing-module .listing-first-row .listing-info span strong {
     font-weight: 600;
     color: #747476;
 }
 
-.listings-container .listings .listing:hover .listing-module .listing-first-row .listing-info span strong {
+.LI-container .listings .listing:hover .listing-module .listing-first-row .listing-info span strong {
     color: #18181B;
 }
 
-.listings-container .listings .listing .listing-module .listing-second-row {
+.LI-container .listings .listing .listing-module .listing-second-row {
     width: 100%;
     height: 16px;
     display: flex;
@@ -191,7 +188,7 @@
     gap: 16px;
 }
 
-.listings-container .listings .listing .listing-module .listing-second-row .listing-liquidity {
+.LI-container .listings .listing .listing-module .listing-second-row .listing-liquidity {
     width: 100%;
     height: 100%;
     display: flex;
@@ -200,17 +197,17 @@
     gap: 8px;
 }
 
-.listings-container .listings .listing .listing-module .listing-second-row .listing-liquidity p {
+.LI-container .listings .listing .listing-module .listing-second-row .listing-liquidity p {
     font-size: 14px;
     font-weight: 400;
     color: #747476;
 }
 
-.listings-container .listings .listing:hover .listing-module .listing-second-row .listing-liquidity p {
+.LI-container .listings .listing:hover .listing-module .listing-second-row .listing-liquidity p {
     color: #18181B;
 }
 
-.listings-container .listings .listing .listing-module .listing-second-row .listing-liquidity .listing-liquidity-amount {
+.LI-container .listings .listing .listing-module .listing-second-row .listing-liquidity .listing-liquidity-amount {
     width: 100%;
     height: 100%;
     display: flex;
@@ -219,7 +216,7 @@
     gap: 4px;
 }
 
-.listings-container .listings .listing .listing-module .listing-second-row .listing-liquidity .listing-liquidity-amount img {
+.LI-container .listings .listing .listing-module .listing-second-row .listing-liquidity .listing-liquidity-amount img {
     width: 24px;
     height: 24px;
     object-fit: cover;
@@ -227,17 +224,17 @@
     padding: 2px;
 }
 
-.listings-container .listings .listing .listing-module .listing-second-row .listing-liquidity .listing-liquidity-amount span {
+.LI-container .listings .listing .listing-module .listing-second-row .listing-liquidity .listing-liquidity-amount span {
     font-size: 14px;
     font-weight: 600;
     color: #747476;
 }
 
-.listings-container .listings .listing:hover .listing-module .listing-second-row .listing-liquidity .listing-liquidity-amount span {
+.LI-container .listings .listing:hover .listing-module .listing-second-row .listing-liquidity .listing-liquidity-amount span {
     color: #18181B;
 }
 
-.listings-container .listings .listing .listing-module .listing-second-row .listing-apy {
+.LI-container .listings .listing .listing-module .listing-second-row .listing-apy {
     width: 100%;
     height: 100%;
     display: flex;
@@ -246,13 +243,13 @@
     gap: 8px;
 }
 
-.listings-container .listings .listing .listing-module .listing-second-row .listing-apy p {
+.LI-container .listings .listing .listing-module .listing-second-row .listing-apy p {
     font-size: 14px;
     font-weight: 400;
     color: #747476;
 }
 
-.listings-container .listings .listing:hover .listing-module .listing-second-row .listing-apy p {
+.LI-container .listings .listing:hover .listing-module .listing-second-row .listing-apy p {
     color: #18181B;
 }
 
@@ -278,22 +275,22 @@
 
 
 
-.bank-container .listing-modal-container {
-    position: fixed;
-    width: 200%;
+.LI-container .listing-modal-container {
+    position: absolute;
+    width: 100%;
     height: 100%;
     top: 0;
-    left: calc(0 + 64px);
+    left: 0;
     backdrop-filter: blur(4px);
     background-color: rgba(0, 0, 0, 0.4);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 0 100px;
+    grid-column: 1 / 13;
 }
 
-.bank-container .listing-modal-container .modal-overlay {
+.LI-container .listing-modal-container .modal-overlay {
     width: 100%;
-    max-width: 532px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -304,6 +301,7 @@
     padding: 24px 16px;
     gap: 16px;
     transition: .2s;
+    grid-column: 4 / 10;
 }
 
 .bank-container .listing-modal-container .modal-overlay .modal-title {
@@ -693,18 +691,78 @@
 
 
 @media only screen and (max-width: 768px) {
-    .listings-container .listings .listing {
-        width: calc(50% - 20px);
-        max-width: none;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .listings-container {
+    .LI-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column: 1 / 5;
+        gap: 20px;
         padding: 0 20px;
     }
 
-    .listings-container .listings .listing {
+    .LI-container .content-container {
         width: 100%;
+        height: auto;
+        grid-column: 1 / 5;
     }
+
+    .LI-container .title {
+        grid-column: 1 / 5;
+        width: 100%;
+        padding: 48px 0 0 0;
+    }
+
+    .LI-container .title h1 {
+        font-size: 32px;
+        line-height: 36px;
+        font-weight: 600;
+        color: #E8E8E8;
+        margin: 0;
+    }
+
+    .LI-container .title p {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #747476;
+    }
+
+    .LI-container .listings {
+        grid-column: 1 / 5;
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .LI-container .listings .filters {
+        grid-column: 1 / 5;
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .LI-container .listings .listing {
+        grid-column: span 4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: #18181B;
+        border-radius: 4px;
+        padding: 12px 16px;
+        gap: 16px;
+        transition: .2s;
+    }
+
+    .LI-container .listings .listing:hover {
+        background-color: #FFE01B;
+        cursor: pointer;
+        transition: .2s;
+    }
+
 }

@@ -103,7 +103,7 @@ export default function Login() {
 
   const handleCart = (nft: NFT) => {
     setCart(prevCart => {
-      const isAlreadyInCart = prevCart.some(item => item.rarity.moonrank.rank === nft.rarity.moonrank.rank);
+      const isAlreadyInCart = prevCart.some(item => item.rarity.moonrank?.rank === nft.rarity.moonrank?.rank);
       if (isAlreadyInCart) {
         toast.warning(`El item ya está en el carrito`);
         return prevCart;
@@ -170,6 +170,8 @@ export default function Login() {
 
   const slicedNfts = nfts.slice(0, 9);
 
+  console.log(slicedNfts)
+
   return (
 
     <div className='vault-modal-container' style={{ display: modalVisible ? 'none' : 'flex' }}>
@@ -233,7 +235,7 @@ export default function Login() {
                 <div className='nft-info' style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%', gap: '2px', alignItems: 'flex-start' }}>
 
                   <div className='nft-name'>
-                    <h1 style={{ color: '#747476' }}>Rank {nft.rarity.moonrank.rank}</h1>
+                    <h1 style={{ color: '#747476' }}>Rank {nft.rarity.moonrank?.rank}</h1>
                   </div>
 
                   <div className='nft-price' style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '4px', width: '100%' }}>
@@ -259,7 +261,7 @@ export default function Login() {
                 <div className='nft-info' style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', height: '100%', width: '100%', gap: '2px', alignItems: 'flex-start' }}>
 
                   <div className='nft-name'>
-                    <h1 style={{ color: '#747476', fontSize: '14px' }}>Rank {nft.rarity.moonrank.rank}</h1>
+                    <h1 style={{ color: '#747476', fontSize: '14px' }}>Rank {nft.rarity.moonrank?.rank}</h1>
                   </div>
 
                   <div className='nft-price' style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '4px', width: '100%' }}>

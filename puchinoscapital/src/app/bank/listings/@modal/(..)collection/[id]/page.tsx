@@ -66,7 +66,7 @@ export default function Login() {
 
   return (
 
-    <div className='listing-modal-container' style={{ display: modalVisible ? 'none' : 'flex' }}>
+    <div className='listing-modal-container'>
 
       <div className='modal-overlay'>
 

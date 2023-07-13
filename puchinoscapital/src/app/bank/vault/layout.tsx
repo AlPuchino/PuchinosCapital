@@ -7,7 +7,7 @@ export default function Layout(props: {
   modal: React.ReactNode
 }) {
   return (
-      <div className='bank-container'>
+      <div className='listings-container'>
             <ToastContainer
       position="top-right"
       autoClose={5000}

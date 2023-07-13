@@ -7,7 +7,7 @@ import ListingsFetch from "./Listings";
 export default function Listings() {
 
     return (
-        <div className="listings-container">
+        <div className="content-container">
 
             <div className="title">
                 <h1>Listings</h1>
